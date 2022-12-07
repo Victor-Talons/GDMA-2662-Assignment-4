@@ -11,7 +11,7 @@
 
 <meta charset="UTF-8">
 
-<title>The Isles Pub and Grill</title>
+<title>Home</title>
 
 </head>
   
@@ -22,7 +22,7 @@
     <div><!-- background -->
         <div class="wrapper row">
             <div class="col-sm-6">
-                <p>The Isles</p>
+                <p><a href="#">The Isles</a></p>
             </div>
             <div class="delete yellow-bg pos-fixed col-sm-12">
                 <div class="delete wrapper">
@@ -38,7 +38,7 @@
                                 <a href="#">menu</a>
                             </li>
 
-                            </li>
+                            
                             <li>
                                 <i class="fa-solid fa-globe"></i>
                                 <a href="#">about</a>
@@ -64,7 +64,7 @@
 </header>
 
 <main> 
-    <section><!-- background color--> 
+    <div><!-- background color--> 
        <div class="wrapper">
             <div class="row col-center ">
                 <section class="col-sm-12 col-lg-4 vert-card"> 
@@ -90,26 +90,27 @@
                     </header>
                     <p>FInd an eventthat suits you andyour friends tast</p>
                     <p><a class="btn" href="">Reserve</a></p>
-                </div>
-            </section>
+                </section>
+            </div>
        </div>
-    </section>
+    </div>
 
-    <section> <!-- background color-->
-        <div class="room-bg col-sm-12 col-md-6"></div> <!--Look at positioning exercise for split backgrounds!-->
-        <div class="wrapper col-sm-12 col-md-4 event-card">
-            <header>
-                <h2>Featured event</h2>
-            </header>
-            <section>
+    <section class="bg-room"> <!-- background color-->
+        <div class="wrapper row flex-end">
+            <div class="col-sm-12 col-md-4 event-card">
                 <header>
-                    <h3>Gameday Parade</h3>
-                    <p>($16 per person)</p>
-                    <p>Up to twenty peopl a room</p>
+                    <h2>Featured event</h2>
                 </header>
-                <p>Specail seating with ideal views of the screens, access to bottom row bar, and  three large pizzas</p>
-                <p><a class="btn" href="">Menu</a></p>
-            </section>
+                <section>
+                    <header>
+                        <h3>Gameday Parade</h3>
+                        <p>($16 per person)</p>
+                        <p>Up to twenty peopl a room</p>
+                    </header>
+                    <p>Specail seating with ideal views of the screens, access to bottom row bar, and  three large pizzas</p>
+                    <p><a class="btn" href="">Menu</a></p>
+                </section>
+            </div>
         </div>
     </section>
 
@@ -165,15 +166,17 @@
     </section>
 </main>
 
-<footer class="wrappers">
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>Menu</li>
-            <li>Reception Hall</li>
-        </ul>
-    </nav>
-    <p>©2022 Isles Pub and Pizza | Lincoln, Nebrsaka</p>
+<footer>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="events.html">Menu</a></li>
+                <li><a href="events.html">Reception Hall</a></li>
+            </ul>
+        </nav>
+        <p>©2022 Isles Pub and Pizza | Lincoln, Nebrsaka</p>
+    </div>    
 </footer>
 
 

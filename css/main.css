@@ -55,10 +55,7 @@ html {
       
 }
 @media screen and (min-width:1024px){
-        /* html {
-                font: 1.5rem 'EB Garamond', serif;
-                line-height: 1rem;
-        } */
+        
 }
 
 
@@ -77,19 +74,12 @@ h1 {
         font: 2rem 'Roboto', sans-serif;
         color: #F2EED5;
         text-align: center;
-
 }
 h2 {
         font: 1.5rem 'Oleo Script Swash Caps', cursive;
         color: #862323;
-        margin-top: 0;
-        
+        margin-top: 0;      
 }
-/* h3 {
-        font: 1.2rem 'Oleo Script Swash Caps', cursive;
-        color: #862323;
-        margin-bottom: 0;
-} */
 h3 {
         font: 1.1rem 'Roboto', sans-serif;
         color: #638238;
@@ -109,13 +99,8 @@ ul {
         padding-left: 0;
         text-align: right;
 }
-footer ul {
-        text-align: center;
-}
-main {
-        text-align: center;
-        
-}
+footer ul,
+main,
 h1 + P {
         text-align: center;
 }
@@ -123,20 +108,15 @@ h1 + P {
 
 
 
-@media screen and (min-width:768px){
-        main{
-                text-align: left;
-        }
-        footer ul {
-                text-align: left;
-        }
-        h1 {
-                text-align: left;
-        }
-        h1 + P {
-                text-align: left;
-        }
 
+@media screen and (min-width:768px){
+        main,
+        footer ul,
+        h1,
+        h1 + P{
+                text-align: left;
+        }
+       
 }
 @media screen and (min-width:1024px){
       
@@ -147,7 +127,7 @@ h1 + P {
 /* ----- ANCHOR ----- */
 
 a {
-        font: .8em 'Montserrat', sans-serif;
+        font: .8rem 'Roboto Slab', serif;
         color: #D1AB54;
         text-decoration: none;
         
@@ -325,7 +305,7 @@ a {
 -------------------------------------------------------------- */
 
 
-main > section:first-child{
+main > div:first-child{
         background-color: #638238;
 }
 
@@ -334,41 +314,33 @@ main > .row:first-child { /* events page */
 }
 
 
-/* event card section styling */
-main > section:nth-child(2) {
-        background-color: #F2EED5; 
-       
-}
 main > section:nth-child(2) p {
         color: #638238;
 }
+main >section:first-child {
+        margin-top: 2em;
+}
 @media screen and (min-width:768px) {
-        main > section:nth-child(2) {
-                background-color: #F2EED5; 
-                position: relative;
-                top: 0;
-                left: 0;
+        
+       
+        main > section:nth-child(2) .bg-lamps + .wrapper {
+                text-align: center;
         }
-        main > section:nth-child(2) .room-bg {
-                position: absolute;
-                top: 0;
-                left: 0;
-        }
-        main > section:nth-child(2) .wrapper {
-                width: 40%;
-                margin-left: 30em;
+
+        .delete ul i {
+                display: none;
         }
 }
+@media screen and (min-width:1024px) {
+        
+}
+
 
 .yellow-bg {
         background-color: #D1AB54;
         display: inline-block;
-        /* background-color: #482822; */
-
 }
-/* main > section:nth-child(2) h3 {
-        color: #000;
-} */
+
 .pos-fixed {
         position: fixed;
         bottom: 0;
@@ -380,17 +352,8 @@ main > section:nth-child(2) p {
 
 
 @media screen and (min-width:768px) {
-        main > section:nth-child(2) {
-                background-color: #F2EED5; 
-                position: relative;
-                top: 0;
-                left: 0;
-        }
-        main > section:nth-child(2) .room-bg {
-                position: absolute;
-                top: 0;
-                left: 0;
-        }
+       
+        
 }
 @media screen and (min-width:1024px) {
      
@@ -427,6 +390,7 @@ nav a {
 height: 100%;
 overflow: hidden; 
 position: relative;
+padding-bottom: 2em;
 
 }
 
@@ -468,9 +432,9 @@ object-fit: cover;
 
         /* ----- carousel control buttons stylings ----- */
 .slide-btn {
-background-color: #bbb;
+background-color: #638238;
 border-radius: 50%;
-border: .2rem solid #d38800;
+border: .2rem solid #fff;
 width: 1.2rem;
 height: 1.2rem;
 outline: none;
@@ -515,18 +479,48 @@ animation: none;
 left: -300%;
 }
 .slide-btn:focus {
-background-color: #308d46;
+background-color: #D1AB54;
 }
+.carousel {
+        margin-top: 3em;
+}
+@media screen and (min-width:768px) {
+        .carousel {
+                margin: 4em auto 4em auto;
+        }
+ 
+}
+@media screen and (min-width:1024px) {
+        .slide-btn {
+                display: none;
+                
+        }
+        .slideshow-wrapper {
+                width: 100%;
+                animation: none;
+                position: static;
+                display: flex;
+                justify-content: space-between;
+                flex-flow: wrap;
+        }
+        .slide,
+        .slideshow {
+                display: contents;
+        }
+        .carousel h2 {
+                text-align: center;
+        }
 
+}
 
 
 /* ----- lamps-bg ----- */
 
-.lamps-bg ~ p:last-child {
+.bg-lamps ~ p:last-child {
         padding-bottom: 2em;
         margin-top: 1em;
 }
-.lamps-bg + header {
+.bg-lamps + header {
         margin: 2em 0em 1em 0em;
 }
 
@@ -538,7 +532,7 @@ background-color: #308d46;
  
 }
 @media screen and (min-width:1024px) {
-
+        
 }
 /* ----- vert-card ----- */
 
@@ -597,13 +591,13 @@ background-color: #308d46;
 
 
 @media screen and (min-width:768px) {
-        .vert-card:first-child {
-                margin-top: 0em;
-        }
 
 }
 @media screen and (min-width:1024px) {
-     
+        .vert-card,
+        .vert-card:first-child {
+                margin-top: 4em;
+        } 
 }
 
 
@@ -613,26 +607,42 @@ background-color: #308d46;
 .event-card,
 .event-card p {
         color: #638238;
-
-}
-.event-card h2 {
-        color: #000;
-        margin-top: 2em;
+        text-align: left;
 }
 .event-card header p, 
 .event-card span{
         font-style: italic;
         font-family: 'Inter', sans-serif;
 }
+.event-card section > p:last-child,
+.event-card > p:last-child {
+        margin: .6em 0em 2em 0em;
+}
+.bg-lamps .event-card,
+.bg-lamps .event-card p,
+.flex-end > .event-card,
+.flex-end > .event-card p {
+        text-align: center;
+}
+.event-card h2 {
+        color: #000;
+        margin-top: 2em;
+}
+.event-card h3 {
+        font-weight: 500;
+}
 .event-card section > p:nth-child(2) {
         margin-top: .8em;
 }
-.event-card section > p:last-child {
-        margin: 1em 0em 2em 0em;
-}
+
 
 @media screen and (min-width:768px) {
-
+        .bg-lamps .event-card,
+        .bg-lamps .event-card p,
+        .flex-end > .event-card,
+        .flex-end > .event-card p{
+        text-align: left;
+}
 }
 @media screen and (min-width:1024px) {
         
@@ -642,10 +652,20 @@ background-color: #308d46;
 header > div:first-child {
         background-color: #638238;
         padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 71;
 }
 header li {
         list-style-type: none;
         display: inline-block;
+}
+header p:first-child > a {
+        font-family: 'Oleo Script Swash Caps', cursive;
+        font-size: 1.2rem;
+        color: #F2EED5;
 }
 #bg-pizza-hero {
         background: url(../img/Pizza-whole-bg@2x.jpg) no-repeat center;
@@ -654,36 +674,74 @@ header li {
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
-        padding: 70px;
+        padding: 70px 0px;
         
 }
-.lamps-bg {
+.bg-lamps:before {
         background: url(../img/dinning-lamps-bg.jpg) no-repeat center;
         -o-background-size: cover;
         -ms-background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
-
-        padding: 200px;
+        height: 300px;
+        width: 100%;
+       
         
 }
-.room-bg {
+.bg-room:before {
         background: url(../img/dinning-room-table-bg.jpg) no-repeat center;
         -o-background-size: cover;
         -ms-background-size: cover;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         background-size: cover;
-
-        padding: 200px 0px;
+        height: 300px;
+        width: 100%;
+}
+.bg-room:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
 }
 
+.bg-lamps::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '';
+}
+.bg-room,
+.bg-lamps {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: #F2EED5;
+        padding-top: 300px;
+}
 @media screen and (min-width:768px) {
-
+        .bg-room,
+        .bg-lamps {
+                padding-top: 0px;
+        }
 }
 @media screen and (min-width:1024px) {
- 
+        #bg-pizza-hero {
+                padding: 140px 0px;
+        }
+        
+        .bg-room:before {
+                height: 100%;
+                width: 50%;
+        }
+        .bg-lamps:before {
+                width: 50%;
+                height: 100%;
+        }
+        .bg-lamps {
+                height: 400px;
+        }
 }
 
 
@@ -695,22 +753,32 @@ footer {
         padding: 30px;
         color: #fff;
         padding-bottom: 5em;
-        margin-top: 40px;
+        
 }
 footer li {
         list-style-type: none;
+        font: 1rem 'Roboto Slab', serif;
 }
-footer p {
-
+footer p,
+footer a {
+        font: 1rem 'Roboto Slab', serif;
+        color: #F2EED5;
 }
 @media screen and (min-width:768px) {
-footer {
-        background-color: #D1AB54;
-        text-align: left;
-}
+        footer {
+                background-color: #D1AB54;
+                text-align: left;
+        
+        }
+        footer p,
+        footer a {
+                color: #fff;
+        }
 }
 @media screen and (min-width:1024px) {
-      
+      footer li {
+        text-align: left;
+      }
         
 }
     
@@ -723,6 +791,9 @@ footer {
 }
 .margin {
         margin: 0 auto;
+}
+.flex-end {
+        justify-content: flex-end;
 }
 
 @media screen and (min-width:768px) {
