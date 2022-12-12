@@ -47,12 +47,14 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
 }
-html {                  
-        color: #000;
-        font-size: 1.2rem;
+html {
+        font: 1.2rem 'Roboto Slab', serif;
 }
 @media screen and (min-width:768px){
-      
+        html {                  
+                color: #000;
+                font-size: 1.2rem;
+        }  
 }
 @media screen and (min-width:1024px){
         
@@ -85,8 +87,8 @@ h3 {
         color: #638238;
         margin-bottom: .5em;
 }
-p {
-        font: 1rem 'Roboto Slab', serif;
+p { /* SHould be defined by HTML */
+        /* font: 1rem 'Roboto Slab', serif; */
         margin: 0;
         color: #F2EED5;
 }
@@ -99,7 +101,6 @@ ul {
         padding-left: 0;
         text-align: right;
 }
-footer ul,
 main,
 h1 + P {
         text-align: center;
@@ -132,17 +133,14 @@ a {
         text-decoration: none;
         
 }
+header a:hover {
+        color: #D1AB54;
+        border-bottom: 2px solid #D1AB54;
+}
+footer a:hover {
+        color: #638238;
+}
 
-.btn {
-        background-color: #482822;
-        border: 1px solid #fff;
-        border-radius: 10px;
-        padding: 5px 25px;
-        color: #fff;
-}
-.btn:hover {
-        background-color: #862323;
-}
 
 
 /*--------------------------------------------------------------
@@ -327,12 +325,10 @@ main >section:first-child {
                 text-align: center;
         }
 
-        .delete ul i {
-                display: none;
-        }
+        
 }
 @media screen and (min-width:1024px) {
-        
+        main > h2
 }
 
 
@@ -361,128 +357,156 @@ main >section:first-child {
 
 
 /* ----- NAV ----- */
-li a{
+li a,
+header nav ul,
+header a i{
         display: inline-block;
 }
-nav li {
+nav li,
+header nav {
         text-align: center;
+}
+nav li,
+nav a {
         color: #fff;
 }
 nav a {
         width: 100%;
-        color: #fff;
+}
+header ul li {
+        margin-right: 0em;
+        
 }
 
 
 
 
 @media screen and (min-width:768px) {
+        .hide-for-small ul i {
+                display: none;
+        }
            
 }
 @media screen and (min-width:1024px) {
-        
+        header ul li {
+                margin-right: 4em;
+                
+        }     
+        header nav {
+                text-align: right;
+        }
 }
 
 /* ----- Carousel ----- */
 
-/* ----- slideshow stylings ----- */
-.slideshow {
-height: 100%;
-overflow: hidden; 
-position: relative;
-padding-bottom: 2em;
+        /* ----- slideshow stylings ----- */
+@media screen and (max-width:768px) {
+        .slideshow,
+        .slideshow-wrapper,
+        .slide,
+        .slide-img {
+                height: 100%;
+        }
 
-}
+        .slideshow {
+                overflow: hidden; 
+                position: relative;
+                padding-bottom: 2em;
 
-.slideshow-wrapper {
-display: flex;
-width: 400%;
-height: 100%;
-position: relative;
-animation: slideshow 30s infinite;
+        }
 
-}
-.slide {
-width: 100%;
-height: 100%;
+        .slideshow-wrapper {
+                display: flex;
+                width: 400%;
+                position: relative;
+                animation: slideshow 30s infinite;
 
-}
-.slide-img {
-width: 100%;
-height: 100%;
-object-fit: cover; 
+        }
+        .slide {
+                width: 100%;
 
-}
+        }
+        .slide-img {
+                width: 100%;
+                object-fit: cover; 
 
-@keyframes slideshow {
-0%  { left: 0; }
-10% { left: 0; }
-15% { left: -100%; }
-25% { left: -100%; }
-30% { left: -200%; }
-40% { left: -200%; }
-45% { left: -300%; }
-55% { left: -300%; }
-60% { left: -200%; }
-70% { left: -200%; }
-75% { left: -100%; }
-85% { left: -100%; }
-90% { left: 0%; }
-}
+        }
 
-        /* ----- carousel control buttons stylings ----- */
-.slide-btn {
-background-color: #638238;
-border-radius: 50%;
-border: .2rem solid #fff;
-width: 1.2rem;
-height: 1.2rem;
-outline: none;
-        /* stylings for positioning the buttons at
-        the bottom of the carousel */
-position: absolute;
-bottom: 0px;
-left: 50%;
-transform: translateX(-50%);
-z-index: 70;
-}
-        /* Button positions */
-.slide-btn-1 {
-left: 35%;
-}
-.slide-btn-2 {
-left: 45%;
-}
-.slide-btn-3 {
-left: 55%;
-}
-.slide-btn-4 {
-left: 65%;
-}   
- 
+        @keyframes slideshow {
+                0%  { left: 0; }
+                10% { left: 0; }
+                15% { left: -100%; }
+                25% { left: -100%; }
+                30% { left: -200%; }
+                40% { left: -200%; }
+                45% { left: -300%; }
+                55% { left: -300%; }
+                60% { left: -200%; }
+                70% { left: -200%; }
+                75% { left: -100%; }
+                85% { left: -100%; }
+                90% { left: 0%; }
+        }
 
+                /* ----- carousel control buttons stylings ----- */
+        .slide-btn {
+                background-color: #638238;
+                -o-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
 
-.slide-btn-1:focus~.slideshow-wrapper {
-animation: none;
-left: 0;
-}
-.slide-btn-2:focus~.slideshow-wrapper {
-animation: none;
-left: -100%;
-}
-.slide-btn-3:focus~.slideshow-wrapper {
-animation: none;
-left: -200%;
-}
-.slide-btn-4:focus~.slideshow-wrapper {
-animation: none;
-left: -300%;
-}
-.slide-btn:focus {
-background-color: #D1AB54;
-}
-.carousel {
-        margin-top: 3em;
+                border: .2rem solid #fff;
+                width: 1.2rem;
+                height: 1.2rem;
+                outline: none;
+                        /* stylings for positioning the buttons at
+                        the bottom of the carousel */
+                position: absolute;
+                bottom: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 70;
+        }
+                /* Button positions */
+        .slide-btn-1 {
+                left: 35%;
+        }
+        .slide-btn-2 {
+                left: 45%;
+        }
+        .slide-btn-3 {
+                left: 55%;
+        }
+        .slide-btn-4 {
+                left: 65%;
+        }   
+        
+        .slide-btn-1:focus~.slideshow-wrapper,
+        .slide-btn-2:focus~.slideshow-wrapper,
+        .slide-btn-3:focus~.slideshow-wrapper,
+        .slide-btn-4:focus~.slideshow-wrapper {
+                animation: none;
+        }
+        .slide-btn-1:focus~.slideshow-wrapper {
+                left: 0;
+        }
+        .slide-btn-2:focus~.slideshow-wrapper {
+                left: -100%;
+        }
+        .slide-btn-3:focus~.slideshow-wrapper {
+                left: -200%;
+        }
+        .slide-btn-4:focus~.slideshow-wrapper {
+                left: -300%;
+        }
+        .slide-btn:focus {
+                background-color: #D1AB54;
+        }
+        .carousel {
+                margin-top: 3em;
+        }
 }
 @media screen and (min-width:768px) {
         .carousel {
@@ -503,7 +527,7 @@ background-color: #D1AB54;
                 justify-content: space-between;
                 flex-flow: wrap;
         }
-        .slide,
+       
         .slideshow {
                 display: contents;
         }
@@ -514,26 +538,6 @@ background-color: #D1AB54;
 }
 
 
-/* ----- lamps-bg ----- */
-
-.bg-lamps ~ p:last-child {
-        padding-bottom: 2em;
-        margin-top: 1em;
-}
-.bg-lamps + header {
-        margin: 2em 0em 1em 0em;
-}
-
-
-
-
-
-@media screen and (min-width:768px) {
- 
-}
-@media screen and (min-width:1024px) {
-        
-}
 /* ----- vert-card ----- */
 
 .vert-card {
@@ -549,45 +553,31 @@ background-color: #D1AB54;
 .vert-card:first-child {
         margin-top: 2em;
 }
-.col-center > .vert-card:first-child div {
-        background: url(../img/Pizza-whole-bg@2x.jpg);
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        padding: 70px;
-        border-radius: 80%;
-        margin: 0 auto;
-        
-        
-}
-.col-center > .vert-card:nth-child(2) div{
-        background: url(../img/pasta-bg.jpg);
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        padding: 70px;
-        border-radius: 80%;
-        margin: 0 auto;
-        
-}
-.col-center > .vert-card:last-child div {
-        background: url(../img/event-bg.jpg);
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        padding: 70px;
-        border-radius: 80%;
-        margin: 0 auto;       
-}
 .vert-card header {
         margin-top: .5em;
 }
+
+.col-center > .vert-card:first-child div {
+        background: url(../img/Pizza-whole-bg@2x.jpg);
+}
+.col-center > .vert-card:nth-child(2) div{
+        background: url(../img/pasta-bg.jpg);     
+}
+.col-center > .vert-card:last-child div {
+        background: url(../img/event-bg.jpg);
+}
+.col-center > .vert-card:first-child div,
+.col-center > .vert-card:nth-child(2) div,
+.col-center > .vert-card:last-child div {
+        padding: 70px;
+        -o-border-radius: 80%;
+        -ms-border-radius: 80%;
+        -webkit-border-radius: 80%;
+        -moz-border-radius: 80%;
+        border-radius: 80%;
+        margin: 0 auto; 
+}
+
 
 
 @media screen and (min-width:768px) {
@@ -636,7 +626,7 @@ background-color: #D1AB54;
 }
 
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) { /* Keep with parent componets */
         .bg-lamps .event-card,
         .bg-lamps .event-card p,
         .flex-end > .event-card,
@@ -664,101 +654,106 @@ header li {
 }
 header p:first-child > a {
         font-family: 'Oleo Script Swash Caps', cursive;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: #F2EED5;
+
 }
-#bg-pizza-hero {
+header p:first-child {
+        text-align: center;
+}
+#hero-bg-pizza {
         background: url(../img/Pizza-whole-bg@2x.jpg) no-repeat center;
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        padding: 70px 0px;
-        
+        padding: 70px 0px;     
 }
-.bg-lamps:before {
-        background: url(../img/dinning-lamps-bg.jpg) no-repeat center;
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        height: 300px;
-        width: 100%;
-       
-        
-}
-.bg-room:before {
-        background: url(../img/dinning-room-table-bg.jpg) no-repeat center;
-        -o-background-size: cover;
-        -ms-background-size: cover;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        background-size: cover;
-        height: 300px;
-        width: 100%;
-}
-.bg-room:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: '';
+@media screen and (min-width:768px) { /* Keep with parent componets */
+        header p:first-child {
+               text-align: left;
+        } 
 }
 
-.bg-lamps::before {
+/* ----- FEATURE ----- */
+#reservation ~ p:last-child {
+        padding-bottom: 2em;
+        margin-top: 1em;
+}
+#reservation + header {
+        margin: 2em 0em 1em 0em;
+}
+
+#reservation::before {
+        background: url(../img/dinning-lamps-bg.jpg) no-repeat center;
+        right: 0;    
+}
+#events:before {
+        background: url(../img/dinning-room-table-bg.jpg) no-repeat center;      
+        left: 0;
+}
+.feature::before {
+        height: 300px;
+        width: 100%;
         position: absolute;
         top: 0;
-        right: 0;
-        content: '';
+        content: '';    
 }
-.bg-room,
-.bg-lamps {
+.feature {
         position: relative;
         top: 0;
         left: 0;
         background-color: #F2EED5;
         padding-top: 300px;
 }
+.feature .event-card,
+.feature .event-card p {
+        text-align: center;
+}
 @media screen and (min-width:768px) {
-        .bg-room,
-        .bg-lamps {
+        .feature {
                 padding-top: 0px;
+        }
+        .feature .event-card,
+        .feature .event-card p,
+        .flex-end > .event-card,
+        .flex-end > .event-card p{
+                text-align: left;
+        }
+        #reservation {
+                margin-top: 5em;
         }
 }
 @media screen and (min-width:1024px) {
-        #bg-pizza-hero {
+        #hero-bg-pizza {
                 padding: 140px 0px;
         }
         
-        .bg-room:before {
+        .feature:before {
                 height: 100%;
                 width: 50%;
         }
-        .bg-lamps:before {
-                width: 50%;
-                height: 100%;
+        #reservation .row .event-card {
+                padding: 120px 0px 120px 0px;
+             
         }
-        .bg-lamps {
-                height: 400px;
-        }
+        
 }
 
 
 /* ----- Footer ----- */
 
+footer ul {
+        text-align: center;
+}
 footer {
         background-color: #638238;
         text-align: center;
         padding: 30px;
-        color: #fff;
         padding-bottom: 5em;
         
 }
 footer li {
         list-style-type: none;
-        font: 1rem 'Roboto Slab', serif;
 }
+
+footer li,
 footer p,
 footer a {
         font: 1rem 'Roboto Slab', serif;
@@ -774,6 +769,9 @@ footer a {
         footer a {
                 color: #fff;
         }
+        footer ul{
+                text-align: left;
+        }
 }
 @media screen and (min-width:1024px) {
       footer li {
@@ -781,7 +779,23 @@ footer a {
       }
         
 }
-    
+
+
+                /* GRouped */
+
+
+.col-center > .vert-card:nth-child(2) div,
+.col-center > .vert-card:first-child div,
+.col-center > .vert-card:last-child div,
+#reservation::before,
+#events::before,
+#hero-bg-pizza  {
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+}
 /*--------------------------------------------------------------
     7.0 - UTILITY
 -------------------------------------------------------------- */
@@ -795,9 +809,23 @@ footer a {
 .flex-end {
         justify-content: flex-end;
 }
+.btn {
+        background-color: #482822;
+        border: 1px solid #fff;
+        -o-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        padding: 5px 25px;
+        color: #fff;
+}
+.btn:hover {
+        background-color: #862323;
+}
 
 @media screen and (min-width:768px) {
-        .delete {
+        .hide-for-small {
                 display: contents;
         }
 }

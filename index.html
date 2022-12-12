@@ -19,33 +19,32 @@
 <body>
 
 <header>
-    <div><!-- background -->
+    <div>
         <div class="wrapper row">
             <div class="col-sm-6">
                 <p><a href="#">The Isles</a></p>
             </div>
-            <div class="delete yellow-bg pos-fixed col-sm-12">
-                <div class="delete wrapper">
+            <div class="hide-for-small yellow-bg pos-fixed col-sm-12">
+                <div class="hide-for-small wrapper">
                     <nav class="col-lg-6">
-                        <ul class="row">
+                        <ul> <!-- Use display inline instead of row -->
                             <li>
-                                <i class="fa-solid fa-pizza-slice"></i>
-                                <a href="#">home</a>
+                                <a href="#"><i class="col-sm-12 fa-solid fa-pizza-slice"></i>home</a>
                             </li>
 
                             <li>
-                                <i class="fa-solid fa-list-ul"></i>
-                                <a href="#">menu</a>
+                                
+                                <a href="#"><i class="col-sm-12 fa-solid fa-list-ul"></i>menu</a>
                             </li>
 
                             
                             <li>
-                                <i class="fa-solid fa-globe"></i>
-                                <a href="#">about</a>
+                                
+                                <a href="#"><i class="col-sm-12 fa-solid fa-globe"></i>about</a>
                             </li>
                             <li>
-                                <i class="fa-regular fa-flag"></i>
-                                <a href="#">open</a>
+                                
+                                <a href="#"><i class="col-sm-12 fa-regular fa-flag"></i>open</a>
                             </li>
                         </ul>
                     </nav>
@@ -53,9 +52,9 @@
             </div>
         </div>
    </div>
-   <div id="bg-pizza-hero"><!-- background -->
+   <div id="hero-bg-pizza"><!-- background -->
         <div class="wrapper">
-            <div class="col-sm-12 col-md-10 col-lg-8">
+            <div class="col-sm-12 col-md-10 col-lg-6">
                 <h1>Historic pizza</h1>
                 <p>The Isles is a great place to grab a bite to eat, watch the game, catch up with family and friends</p>
             </div>
@@ -67,7 +66,7 @@
     <div><!-- background color--> 
        <div class="wrapper">
             <div class="row col-center ">
-                <section class="col-sm-12 col-lg-4 vert-card"> 
+                <section class="col-sm-9 col-lg-4 vert-card"> 
                     <div class="col-sm-4"></div> <!-- background -->
                     <header>
                         <h2>Pizza</h2>
@@ -75,7 +74,7 @@
                     <p>Our  historic pizzaIs garunteed to be satisfying </p>
                     <p><a class="btn" href="">Order</a></p>
                 </section>
-                <section class="col-sm-12 col-lg-4 vert-card"> 
+                <section class="col-sm-9 col-lg-4 vert-card"> 
                     <div class="col-sm-4"></div> <!-- background -->
                     <header>
                         <h2>Pasta</h2>
@@ -83,7 +82,7 @@
                     <p>Our famous Pastais mouthwateringly devine </p>
                     <p><a class="btn" href="">Order</a></p>
                 </section>
-                <section class="col-sm-12 col-lg-4 vert-card"> 
+                <section class="col-sm-9 col-lg-4 vert-card"> 
                     <div class="col-sm-4"></div> <!-- background -->
                     <header>
                         <h2>Events</h2>
@@ -130,37 +129,35 @@
                         <header>
                             <h3>Gameday Parade <span>......($16 per person)</span></h3>
                         </header>
-                        <p><span>Up to twenty people a room</span></p>
+                        <p><span>Up to twenty people a room</span></p> <!-- Consider italics -->
                         <p>Specail seating with ideal views of the screens, access to bottom row bar, and  three large pizzas</p>
                     </section>
                 </div>
-                <div class="slide">
-                    <section  class="event-card col-sm-12 col-md-6">
-                        <header>
-                            <h3>Chili Time <span>......($12 per person)</span></h3>
-                        </header>
-                        <p><span>Up to ten people a room</span></p>
-                        <p>Reserved seating, access to full menu, free game cards for all the young ones.</p>
-                    </section>
-                </div>
-                <div class="slide">
-                    <section class="event-card col-sm-12 col-md-6">
-                        <header>
-                            <h3>Night Out<span>......($14 per person)</span></h3>
-                        </header>
-                        <p><span>Up to seven people a room</span></p>
-                        <p>Only for adults twenty one and older. one appatizer <span>(per table)</span> one meal <span>(per person)</span></p>
-                    </section>
-                </div>
-                <div class="slide">
-                    <section class="event-card col-sm-12 col-md-6">
-                        <header>
-                            <h3>Mister Rideculous's <br> Specail Meal plan<span>......($20 per person)</span></h3>
-                        </header>
-                        <p><span>Up to twent people a room</span></p>
-                        <p>Seven full pizzas, two appetizers, open bar and reserved seating.</p>
-                    </section>
-                </div>
+                
+                <section  class="slide event-card col-sm-12 col-md-6">
+                    <header>
+                        <h3>Chili Time <span>......($12 per person)</span></h3>
+                    </header>
+                    <p><span>Up to ten people a room</span></p>
+                    <p>Reserved seating, access to full menu, free game cards for all the young ones.</p>
+                </section>
+            
+                <section class="slide event-card col-sm-12 col-md-6">
+                    <header>
+                        <h3>Night Out<span>......($14 per person)</span></h3>
+                    </header>
+                    <p><span>Up to seven people a room</span></p>
+                    <p>Only for adults twenty one and older. one appatizer <span>(per table)</span> one meal <span>(per person)</span></p>
+                </section>
+            
+                <section class="slide event-card col-sm-12 col-md-6">
+                    <header>
+                        <h3>Mister Rideculous's <br> Specail Meal plan<span>......($20 per person)</span></h3>
+                    </header>
+                    <p><span>Up to twent people a room</span></p>
+                    <p>Seven full pizzas, two appetizers, open bar and reserved seating.</p>
+                </section>
+               
             </div>
         </div>
     </section>
@@ -175,7 +172,7 @@
                 <li><a href="events.html">Reception Hall</a></li>
             </ul>
         </nav>
-        <p>©2022 Isles Pub and Pizza | Lincoln, Nebrsaka</p>
+        <p>&copy;2022 Isles Pub and Pizza | Lincoln, Nebrsaka</p>
     </div>    
 </footer>
 
