@@ -328,7 +328,10 @@ main >section:first-child {
         
 }
 @media screen and (min-width:1024px) {
-        main > h2
+        main section:first-child h2{
+                text-align: center;
+                text-transform: uppercase;
+        }
 }
 
 
