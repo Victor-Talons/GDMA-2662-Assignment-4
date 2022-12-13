@@ -388,6 +388,10 @@ header ul li {
         .hide-for-small ul i {
                 display: none;
         }
+        header ul li {
+                margin-right: 1em;
+                
+        }  
            
 }
 @media screen and (min-width:1024px) {
@@ -672,6 +676,9 @@ header p:first-child {
         header p:first-child {
                text-align: left;
         } 
+        #hero-bg-pizza {
+                padding: 120px 0px; 
+        }
 }
 
 /* ----- FEATURE ----- */
@@ -713,17 +720,24 @@ header p:first-child {
         .feature {
                 padding-top: 0px;
         }
-        .feature .event-card,
-        .feature .event-card p,
-        .flex-end > .event-card,
-        .flex-end > .event-card p{
-                text-align: left;
-        }
+       
         #reservation {
                 margin-top: 5em;
         }
+        #events .flex-end,
+        #reservation .event-card {
+                padding-top: 14em;
+        }
 }
 @media screen and (min-width:1024px) {
+        #events .flex-end,
+        #reservation .event-card {
+                padding-top: 0em;
+        }
+        #reservation > .col-center {
+                justify-content: flex-start;
+        }
+
         #hero-bg-pizza {
                 padding: 140px 0px;
         }
@@ -735,6 +749,12 @@ header p:first-child {
         #reservation .row .event-card {
                 padding: 120px 0px 120px 0px;
              
+        }
+        .feature .event-card,
+        .feature .event-card p,
+        .flex-end > .event-card,
+        .flex-end > .event-card p{
+                text-align: left;
         }
         
 }
@@ -771,6 +791,7 @@ footer a {
         footer p,
         footer a {
                 color: #fff;
+                text-align: center;
         }
         footer ul{
                 text-align: left;
@@ -809,9 +830,7 @@ footer a {
 .margin {
         margin: 0 auto;
 }
-.flex-end {
-        justify-content: flex-end;
-}
+
 .btn {
         background-color: #482822;
         border: 1px solid #fff;
@@ -831,7 +850,16 @@ footer a {
         .hide-for-small {
                 display: contents;
         }
+        .flex-end {
+                justify-content: center;
+        }
 }
+@media screen and (min-width:1024px) {
+        .flex-end {
+                justify-content: flex-end;
+        }
+          
+  }
 
 
  
