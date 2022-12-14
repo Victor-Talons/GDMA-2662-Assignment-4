@@ -335,7 +335,7 @@ main >section:first-child {
 }
 
 
-.yellow-bg {
+.bg-yellow {
         background-color: #D1AB54;
         display: inline-block;
 }
@@ -380,7 +380,9 @@ header ul li {
         margin-right: 0em;
         
 }
-
+header nav a {
+        font: .8rem 'Roboto', sans-serif, i;
+}
 
 
 
@@ -514,18 +516,26 @@ header ul li {
         .carousel {
                 margin-top: 3em;
         }
+        .carousel ~ p {
+                margin: 3em 0em 3em 0em;
+                text-align: center;
+        }
 }
 @media screen and (min-width:768px) {
         .carousel {
                 margin: 4em auto 4em auto;
         }
- 
-}
-@media screen and (min-width:1024px) {
         .slide-btn {
                 display: none;
                 
         }
+        .carousel ~ p {
+                margin: 3em 0em 3em 0em;
+                text-align: center;
+        }
+}
+@media screen and (min-width:1024px) {
+      
         .slideshow-wrapper {
                 width: 100%;
                 animation: none;
@@ -595,6 +605,9 @@ header ul li {
         .vert-card:first-child {
                 margin-top: 4em;
         } 
+        .vert-card:first-child h2 {
+                text-transform: capitalize;
+        }
 }
 
 
@@ -785,7 +798,7 @@ footer a {
 @media screen and (min-width:768px) {
         footer {
                 background-color: #D1AB54;
-                text-align: left;
+               
         
         }
         footer p,
@@ -793,19 +806,21 @@ footer a {
                 color: #fff;
                 text-align: center;
         }
-        footer ul{
-                text-align: left;
-        }
+       
 }
 @media screen and (min-width:1024px) {
-      footer li {
-        text-align: left;
-      }
+        footer p,
+        footer a {
+                text-align: left;
+        }
+        footer p {
+                margin-top: 1em;
+        }
         
 }
 
 
-                /* GRouped */
+                /* Grouped */
 
 
 .col-center > .vert-card:nth-child(2) div,
