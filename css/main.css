@@ -347,17 +347,6 @@ main >section:first-child {
         z-index: 71;
 }
 
-/* ----- Grouped ----- */
-
-
-@media screen and (min-width:768px) {
-       
-        
-}
-@media screen and (min-width:1024px) {
-     
-}
-
 
 /* ----- NAV ----- */
 li a,
@@ -651,11 +640,14 @@ header nav a {
         .bg-lamps .event-card p,
         .flex-end > .event-card,
         .flex-end > .event-card p{
-        text-align: left;
-}
+                text-align: left;
+        }
 }
 @media screen and (min-width:1024px) {
-        
+        .feature .col-center > .event-card h2,
+        .feature .col-center > .event-card p {
+                text-align: center;
+        }
 }
 
 /* ----- hero ----- */
@@ -685,6 +677,7 @@ header p:first-child {
         background: url(../img/Pizza-whole-bg@2x.jpg) no-repeat center;
         padding: 70px 0px;     
 }
+
 @media screen and (min-width:768px) { /* Keep with parent componets */
         header p:first-child {
                text-align: left;
